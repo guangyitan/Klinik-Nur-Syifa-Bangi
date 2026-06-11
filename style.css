@@ -393,6 +393,111 @@ header.scrolled {
   font-weight: 600;
 }
 
+/* Testimonials Section */
+.testimonials-section {
+  padding: 100px 0;
+  background-color: var(--primary-bg);
+  overflow: hidden;
+}
+
+.testimonials-carousel-wrapper {
+  position: relative;
+  margin-top: 60px;
+}
+
+.testimonials-carousel {
+  display: flex;
+  gap: 32px;
+  animation: autoScroll 30s linear infinite;
+  width: max-content;
+}
+
+.testimonials-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 16px)); /* Half width minus half gap */
+  }
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-color);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-light);
+}
+
+.testimonial-info h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-dark);
+}
+
+.testimonial-rating {
+  color: #FFB400;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.testimonial-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.google-badge {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.google-badge img {
+  width: 20px;
+  height: 20px;
+}
+
+
 .hero-tagline {
   display: inline-block;
   color: var(--accent-color);
