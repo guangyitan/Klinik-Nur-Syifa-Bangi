@@ -284,10 +284,20 @@ header.scrolled {
   padding: 100px 0;
 }
 
-.hero-container {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start; /* Left aligned content over bg */
+/* Standard Hero Section for Internal Pages */
+.hero-internal {
+  min-height: 50vh !important;
+  padding: 60px 0 !important;
+}
+
+.hero-internal .hero-container {
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-internal .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-content {
